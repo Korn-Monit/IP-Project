@@ -19,9 +19,42 @@
             </div>
     </header>
 
-    <div class="bg-white w-[100%] h-[600px]">
+    <div class="bg-white w-[100%] h-[600px] flex justify-center">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWnFbaQ9t-dZkzcpKYwda8pinLxIaFgzahNUpFejd34RbsvHg" alt="" class="h-[300px] border-2 border-black">
+      <div>
+        <div>
+          <span>Nike OVERBREAK</span>
+          <span class="ml-[100px]">$112</span>
+        </div>
+        <div class="h-[1px] bg-black"></div>
+        <div>
+          <span>Size</span>
+          <span class="ml-[200px]">Size Chart</span>
+        </div>
+        <div>
+          <span class="border-2 border-black">Woman</span>
+          <span class="border-2 border-black ml-[200px]">Man</span>
+        </div>
+        <div>
+          <span class="border-2 border-black">Choose Size</span>
+        </div>
+        <div class="h-[1px] bg-black"></div>
+        <div>
+          <h1>Quantity</h1>
+        </div>
+        <div>
+          <span class="border-2 border-black">1</span>
+        </div>
+        <div class="h-[1px] bg-black"></div>
+        <div>
+          <h1 class="border-2 border-black bg-violet-500 text-center" > 
+            <b>Add To Card</b> 
+          </h1>
+        </div>
 
+      </div>
     </div>
+    <div class="h-[1px] bg-black"></div>
 
     <footer class="footer">
           <div class="flex items-center">
