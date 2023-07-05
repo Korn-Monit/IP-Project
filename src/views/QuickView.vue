@@ -1,60 +1,94 @@
 <template>
   <header class="header">
-    <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" height="60px" style="margin-top: 5px;">
-            <div class="nom"> ZL-SNICKERS</div>
-            <div class="t"><a href="/about">About</a> </div>
-            <div class="t"><a href="">Categories</a></div>
-            <div class="t"><a href="">Contact</a></div>
+      <router-link :to="{ name: 'home' }">
+        <button>
+          <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
+        </button>
+      </router-link>
 
-            <form action="">
-              <input class="search" type="text" placeholder="search">
-              <button type="submit" class="ss bg-white">
-                 <img class="mt-[5px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="" height="20px" width="20px">
-              </button>
-            </form>
+      <div class="nom">
+          <router-link :to="{ name: 'home' }">
+            <button>ZL-SNICKERS</button>
+          </router-link>
+      </div>
+      <div class="t"><a href="/about">About</a> </div>
+      <div class="t"><a href="">Categories</a></div>
+      <div class="t"><a href="">Contact</a></div>
+      
+      <div>
+        <input class="search m" type="text" placeholder="search">
+        <button type="submit" class="">
+          <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
+        </button>
+      </div>
 
-            <div class="flex">
-              <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
-              <span class="en mt-[25px] ml-[5px]" >EN</span>
-            </div>
+      <div class="flex">
+        <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
+        <span class="en mt-[25px] ml-[5px]" >EN</span>
+      </div>
     </header>
 
-    <div class="bg-white w-[100%] h-[600px] flex justify-center">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWnFbaQ9t-dZkzcpKYwda8pinLxIaFgzahNUpFejd34RbsvHg" alt="" class="h-[300px] border-2 border-black">
-      <div>
-        <div>
-          <span>Nike OVERBREAK</span>
-          <span class="ml-[100px]">$112</span>
-        </div>
-        <div class="h-[1px] bg-black"></div>
-        <div>
-          <span>Size</span>
-          <span class="ml-[200px]">Size Chart</span>
-        </div>
-        <div>
-          <span class="border-2 border-black">Woman</span>
-          <span class="border-2 border-black ml-[200px]">Man</span>
-        </div>
-        <div>
-          <span class="border-2 border-black">Choose Size</span>
-        </div>
-        <div class="h-[1px] bg-black"></div>
-        <div>
-          <h1>Quantity</h1>
-        </div>
-        <div>
-          <span class="border-2 border-black">1</span>
-        </div>
-        <div class="h-[1px] bg-black"></div>
-        <div>
-          <h1 class="border-2 border-black bg-violet-500 text-center" > 
-            <b>Add To Card</b> 
-          </h1>
-        </div>
+    <div class="bg-white w-[100%] h-[600px]">
+      <div class="flex justify-center gap-x-[40px] pt-[50px]">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWnFbaQ9t-dZkzcpKYwda8pinLxIaFgzahNUpFejd34RbsvHg" alt="" class="h-[350px] border-2 border-black">
 
+        <div>
+          <div class="mb-[10px]">
+            <span class="text-[30px]"><b>Nike OVERBREAK</b></span>
+            <span class="ml-[100px] text-[30px]"> <b>$112</b> </span>
+          </div>
+          <div class="h-[1px] bg-black"></div>
+          <div class="mb-[10px]">
+            <span> <b>Size</b>  </span>
+            <span class="ml-[200px] text-sky-600 underline-offset-1 underline">Size Chart</span>
+          </div>
+          <div class="mb-[30px]">
+            <span class="border-2 border-black pt-[10px] pb-[10px] pr-[60px] pl-[60px]">Woman</span>
+            <span class="border-2 border-black ml-[50px] pt-[10px] pb-[10px] pr-[60px] pl-[60px]">Man</span>
+          </div>
+          <div class="mb-[20px]">
+            <span class="border-2 border-black pt-[10px] pb-[10px] pr-[120px] pl-[120px] ">
+              Choose Size 
+            </span>
+            <button class="border-2 border-black pt-[-4px] pb-[13px] pr-[10px]">
+                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672341-triangle-down-64.png" alt="" class="h-[30px] w-[30px] ml-[10px] pt-[10px]">
+            </button>
+          </div>
+          <div class="h-[1px] bg-black mb-[10px]"></div>
+          <div class="mb-[15px]">
+            <h1><b>Quantity</b></h1>
+          </div>
+          <div class="mb-[15px]">
+            <span class="border-2 border-black pt-[10px] pb-[10px] pr-[60px] pl-[60px]">1</span>
+          </div>
+          <div class="h-[1px] bg-black mb-[10px]"></div>
+          <div class="mb-[15px]">
+            <h1 class="border-2 border-black bg-violet-500 text-center pt-[10px] pb-[10px] pr-[60px] pl-[60px]" > 
+              <b>Add To Card</b> 
+            </h1>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="h-[2px] bg-slate-400 w-[90%] ml-[5%]"></div>
+      <div>
+        <h1 class="ml-[80px]">
+          <b>Related Products</b>
+        </h1>
+
+        <div class="flex justify-evenly">
+          <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5b0981ff-45f8-40c3-9372-32430a62aaea/dunk-high-womens-shoes-cF9txG.png" alt="" class="h-[150px] w-[150px]">
+          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-mens-shoes-jBrhbr.png" alt="" class="h-[150px] w-[150px]">
+          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/53a1614a-a5fd-4bfe-977e-6921451ed50e/air-force-1-react-mens-shoes-WSjfs8.png" alt="" class="h-[150px] w-[150px]">
+          <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/14a35c8c-dcd1-462d-97f7-1bddb677184c/dunk-low-lx-womens-shoes-kPGHX0.png" alt="" class="h-[150px] w-[150px]">
+          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87d7e901-4d08-4456-9d62-07e821aff45b/air-max-90-futura-womens-shoes-kvRZ4h.png" alt="" class="h-[150px] w-[150px]">
+        </div>
       </div>
     </div>
-    <div class="h-[1px] bg-black"></div>
+
+
+
 
     <footer class="footer">
           <div class="flex items-center">

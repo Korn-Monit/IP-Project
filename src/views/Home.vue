@@ -3,22 +3,45 @@
   <div >
     <!-- Header code here -->
     <header class="header">
-            <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" height="60px" style="margin-top: 5px;">
-            <div class="nom"> ZL-SNICKERS</div>
+            <div>
+                <span>
+                  <router-link :to="{ name: 'home' }">
+                    <button>
+                      <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
+                    </button>
+                  </router-link>
+                </span>
+                <span class="nom ml-[20px] p">
+                    <router-link :to="{ name: 'home' }">
+                      <button>ZL-SNICKERS</button>
+                    </router-link>
+                </span>
+            </div>
             <div class="t"><a href="/about">About</a> </div>
-            <div class="t"><a href="">Categories</a></div>
-            <div class="t"><a href="">Contact</a></div>
+            <div class="t"><a href="/">Categories</a></div>
+            <div class="t"><a href="/">Contact</a></div>
 
-            <form action="">
-              <input class="search" type="text" placeholder="search">
-              <button type="submit" class="ss bg-white">
-                 <img class="mt-[5px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="" height="20px" width="20px">
+            <div>
+              <input class="search m" type="text" placeholder="search">
+              <button type="submit" class="">
+                <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
               </button>
-            </form>
+            </div>
 
             <div class="flex">
               <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
               <span class="en mt-[25px] ml-[5px]" >EN</span>
+            </div>
+
+            <div>
+                  <router-link :to="{ name: 'landingpage' }">
+                      <button class="flex">
+                          <span>
+                              <img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png" alt="" class="h-[25px] mt-[25px]">
+                          </span>
+                          <span class="pt-[25px] ml-[5px]">Logout</span>
+                      </button>
+                  </router-link>
             </div>
       </header>
 
@@ -32,12 +55,12 @@
           <div class="flex justify-evenly ">
             <div>
               <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSUdwFwR1CaRWCGe_byoandSkYJSssOGpwzypwSlDTC6YLqD1aG" alt="" class="w-[200px] h-[200px]">
-              <h2>Nike</h2>
+              <h2> <b>Nike</b>  </h2>
               <p>OVERBREAK</p>
               <p>$112.00</p>
               <router-link :to="{ name: 'view' }">
                 <button class="border-2 border-black">
-                  QUICK VIEW1
+                  QUICK VIEW
                 </button>
               </router-link>
             </div>
@@ -46,36 +69,44 @@
               <h2>Nike</h2>
               <p>ACG AIR MOWABB</p>
               <p>$128.00</p>
-              <button class="border-2 border-black">
-                QUICK VIEW
-              </button>
+              <router-link :to="{ name: 'view' }">
+                <button class="border-2 border-black">
+                  QUICK VIEW
+                </button>
+              </router-link>
             </div>
             <div>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcp-fgQEmUIF6iXdK4e_ZdT7mcIwwioEQcZ6JJtMxPtYo7AJ7" alt="" class="w-[200px] h-[200px]">
               <h2>Nike</h2>
               <p>OVERBREAK</p>
               <p>$112.00</p>
-              <button class="border-2 border-black">
-                QUICK VIEW
-              </button>
+              <router-link :to="{ name: 'view' }">
+                <button class="border-2 border-black">
+                  QUICK VIEW
+                </button>
+              </router-link>
             </div>
             <div>
               <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRxsvn_2WPcQLy5eH7jkVfOc1j8vN1zsNROmw2Ovxjt_CSmczYb" alt="" class="w-[200px] h-[200px]">
               <h2>Nike</h2>
               <p>AIR FORCE 1 '07 CRAFT</p>
               <p>$96.00</p>
-              <button class="border-2 border-black">
-                QUICK VIEW
-              </button>
+              <router-link :to="{ name: 'view' }">
+                <button class="border-2 border-black">
+                  QUICK VIEW
+                </button>
+              </router-link>
             </div>
             <div>
               <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSwK1F0G-9P6HgZJmJPi4ebaBWoANuTJqolFLgcwzJ4gMu9SCJg" alt="" class="w-[200px] h-[200px]">
               <h2>Nike</h2>
               <p>BLAZER MID '77 VINTAGE</p>
               <p>$80.00</p>
-              <button class="border-2 border-black">
-                QUICK VIEW
-              </button>
+              <router-link :to="{ name: 'view' }">
+                <button class="border-2 border-black">
+                  QUICK VIEW
+                </button>
+              </router-link>
             </div>
           </div>
           <!-- <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHuZ0PV53kULFnyZSv1yII5HIKjeC7Y7Sy5-osqeuTXWiEwjb6" alt=""> -->
@@ -92,7 +123,7 @@
             <a href=""><img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="" width="50px" height="50px" class="num1"></a>
             <a href=""><img src="https://cdn4.iconfinder.com/data/icons/logos-3/565/Mastercard-logo-64.png" alt="" width="50px" height="50px"  class="num1"></a> 
             <a href=""><img src="https://cdn3.iconfinder.com/data/icons/payment-method-1/64/_Paypal-39-64.png" alt="" width="50px" height="50px" class="num1"></a>
-            <a href="" class="num11">FAQ</a>
+            <a href="" class="ml-[20px]">FAQ</a>
           </div>
 
           <div class="flex items-center">
@@ -148,10 +179,10 @@ export default {
     margin-left: 30px;
   }
 
-  .num11{
+  /* .num11{
     margin-left: 30px;
     padding-bottom: 50px;
-  }
+  } */
 
   .num2{
     margin-right: 30px;
@@ -162,6 +193,7 @@ export default {
     background-color: rgb(240, 188, 92);
     display: flex;
     justify-content: space-between;
+    height: 70px;
   }
 
   .langue{
