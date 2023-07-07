@@ -63,9 +63,11 @@
           </div>
           <div class="h-[1px] bg-black mb-[10px]"></div>
           <div class="mb-[15px]">
-            <h1 class="border-2 border-black bg-violet-500 text-center pt-[10px] pb-[10px] pr-[60px] pl-[60px]" > 
-              <b>Add To Card</b> 
-            </h1>
+            <router-link :to="{ name: 'card'}">
+              <button class="border-2 border-black bg-violet-500 text-center pt-[10px] pb-[10px] pr-[60px] pl-[60px]">
+                  <b>Add To Card</b> 
+              </button>
+            </router-link>
           </div>
 
         </div>

@@ -1,6 +1,6 @@
 <template>
-<!-- Header code here -->
-          <header class="header">
+    <!-- Header code here -->
+      <header class="header">
             <div>
                 <span>
                   <router-link :to="{ name: 'home' }">
@@ -44,7 +44,22 @@
       </header>
 
       <div class="bg-white w-[100%] h-[600px]">
+        <div class="w-[700px] ml-[200px]">
+          <!-- <div class="text-center"> -->
+            <h1 class="text-[30px]"><b>About our website</b></h1>
+            <p>At Our Snickers Store, we are passionate about providing the best selection of snickers, ensuring that every step you take is in style, comfort, and confidence. We pride ourselves on being the go-to destination for snickers enthusiasts, offering a wide range of options to suit every taste and preference.</p>
 
+            <h1 class="text-[30px]"><b>Our Mission</b></h1>
+            <p>Our mission is simple - to bring you the latest and greatest snickers from top brands, all in one convenient place. We aim to be your trusted source for finding the perfect snickers that not only complement your style but also enhance your performance and comfort.</p>
+
+            <h1 class="text-[30px]"><b>Quality and Variety</b></h1>
+            <p>We understand that every snickers enthusiast has unique preferences. That's why we curate our collection to offer a diverse range of snickers styles, colors, and sizes. Whether you're a casual walker, a dedicated runner, or a fashion-forward trendsetter, we have the snickers that will exceed your expectations.</p>
+
+            <h1 class="text-[30px]"><b>Expertise and Guidance</b></h1>
+            <p>Choosing the right snickers can be overwhelming, especially with so many options available. Our team of snickers experts is here to guide you through the selection process, offering personalized advice and recommendations. We stay updated with the latest trends and technologies in the snickers industry to ensure you make an informed decision.</p>
+
+          <!-- </div> -->
+        </div>
       </div>
 
       <!-- footer -->

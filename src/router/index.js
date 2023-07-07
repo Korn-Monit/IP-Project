@@ -42,6 +42,21 @@ const router = createRouter({
       path: "/quickview",
       name: "view",
       component: () => import("../views/QuickView.vue"),
+    },
+    {
+      path: "/contactus",
+      name: "contactus",
+      component: () => import("../views/ContactUs.vue"),
+    },
+    {
+      path: "/card",
+      name: "card",
+      component: () => import("../views/Card.vue"),
+    },
+    {
+      path: "/cusinfo",
+      name: "cusinfo",
+      component: () => import("../views/CusInfo.vue"),
     }
   ],
 });

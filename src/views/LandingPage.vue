@@ -19,7 +19,7 @@
               </div>
               <div class="t"><a href="/about">About</a> </div>
               <div class="t"><a href="">Categories</a></div>
-              <div class="t"><a href="">Contact</a></div>
+              <div class="t"><a href="/contactus">Contact</a></div>
               
               <!-- search -->
               <!-- <form action=""> -->
