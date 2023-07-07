@@ -80,7 +80,9 @@
                   <div>
                     <span><b>Return to Cart</b></span>
                     <span class="ml-[270px]">
-                      <button class="border-2 border-black bg-indigo-800 text-white p-2">Continue to Shipping Method</button>
+                      <router-link :to="{name: 'shippingadd'}">
+                        <button class="border-2 border-black bg-indigo-800 text-white p-2">Continue to Shipping Method</button>
+                      </router-link>
                     </span>
                   </div>
               </div>
