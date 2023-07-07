@@ -49,36 +49,36 @@
             <div class="flex justify-center gap-x-[70px]">
               <!-- <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div> -->
               <div>
-                  <span>Customer Infomation</span>
+                  <span><b>Customer Infomation</b></span>
                   <span class="ml-[200px]">Already have an account? <a href="">Log In</a></span>
                   <div>
-                    <input type="text" name="" id="" placeholder="Email" class="border-2 border-black w-[620px]">
+                    <input type="text" name="" id="" placeholder="Email" class="border-2 border-black w-[620px] h-[50px] indent-[10px]">
+                  </div>
+                  <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+
+                  <div class="mb-[20px]"><b>Shipping Address</b></div>
+                  <div>
+                    <input type="text" name="" id="" placeholder="First Name" class="border-2 border-black mr-[10px] mb-[10px] w-[305px] h-[50px] indent-[10px]">
+                    <input type="text" name="" id="" placeholder="Last Name" class="border-2 border-black w-[305px] h-[50px] indent-[10px]">
+                  </div>
+
+                  <div>
+                    <input type="text" name="" id="" placeholder="Company" class="border-2 border-black mb-[10px] w-[620px] h-[50px] indent-[10px]">
+                  </div>
+
+                  <div>
+                    <input type="text" name="" id="" placeholder="Address" class="border-2 border-black mr-[10px] w-[400px] h-[50px] indent-[10px]">
+                    <input type="text" name="" id="" placeholder="Apt (optional)" class="border-2 border-black mb-[10px] w-[210px] h-[50px] indent-[10px]">
+                  </div>
+
+                  <div>
+                    <input type="text" name="" id="" placeholder="Country" class="border-2 border-black mr-[10px] w-[230px] h-[50px] indent-[10px]">
+                    <input type="text" name="" id="" placeholder="State" class="border-2 border-black mr-[10px] w-[230px] h-[50px] indent-[10px]">
+                    <input type="text" name="" id="" placeholder="Zip" class="border-2 border-black w-[140px] h-[50px] indent-[10px]">
                   </div>
                   <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div>
-
-                  <span>Shipping Address</span>
                   <div>
-                    <input type="text" name="" id="" placeholder="First Name" class="border-2 border-black mr-[10px] mb-[10px] w-[305px]">
-                    <input type="text" name="" id="" placeholder="Last Name" class="border-2 border-black w-[305px]">
-                  </div>
-
-                  <div>
-                    <input type="text" name="" id="" placeholder="Company" class="border-2 border-black mb-[10px] w-[620px]">
-                  </div>
-
-                  <div>
-                    <input type="text" name="" id="" placeholder="Address" class="border-2 border-black mr-[10px] w-[400px]">
-                    <input type="text" name="" id="" placeholder="Apt (optional)" class="border-2 border-black mb-[10px] w-[210px]">
-                  </div>
-
-                  <div>
-                    <input type="text" name="" id="" placeholder="Country" class="border-2 border-black mr-[10px] w-[230px]">
-                    <input type="text" name="" id="" placeholder="State" class="border-2 border-black mr-[10px] w-[230px]">
-                    <input type="text" name="" id="" placeholder="Zip" class="border-2 border-black w-[140px]">
-                  </div>
-                  <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div>
-                  <div>
-                    <span>Return to Cart</span>
+                    <span><b>Return to Cart</b></span>
                     <span class="ml-[270px]">
                       <button class="border-2 border-black bg-indigo-800 text-white p-2">Continue to Shipping Method</button>
                     </span>
@@ -86,25 +86,25 @@
               </div>
 
 
-            <div class="w-[320px] h-[300px] bg-gray-300">
-                <h1 class="ml-[10px]"><b>Summary (1 item)</b></h1>
+            <div class="w-[350px] h-[350px] bg-gray-300">
+                <h1 class="ml-[10px] mt-[20px]"><b>Summary (1 item)</b></h1>
 
-                <div class="ml-[20px] mt-[15px] mb-[5px]">
-                  <span>Subtotal</span>
-                  <span class="ml-[70px]">$112</span>
+                <div class="ml-[20px] mt-[30px] mb-[5px]">
+                  <span class="ml-[10px]">Subtotal</span>
+                  <span class="ml-[170px]">$112</span>
                 </div>
 
-                <h1 class="ml-[20px] mb-[5px]">Shipping</h1>
-                <h1 class="ml-[20px] mb-[5px]">Est. Taxes</h1>
-                <div class="h-[2px] bg-white mb-[10px] w-[170px] mt-[15px] ml-[10px]"></div>
-                <div class="ml-[20px]">Gift card or discount code</div>
+                <h1 class="ml-[30px] mb-[5px]">Shipping</h1>
+                <h1 class="ml-[30px] mb-[5px]">Est. Taxes</h1>
+                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
+                <div class="ml-[20px] mb-[10px]">Gift card or discount code</div>
                 <div>
-                    <span class="ml-[20px]"><input type="text" name="" id="" class="border-black border-[2px]"></span>
-                    <button class="ml-[20px] border-2 border-black bg-indigo-800 text-white pl-[10px] pr-[10px]">Apply</button>
+                    <span class="ml-[20px]"><input type="text" name="" id="" class="border-black border-[2px] h-[40px] mb-[10px]"></span>
+                    <button class="ml-[20px] border-2 border-black bg-indigo-800 text-white pl-[10px] pr-[10px] h-[40px] w-[80px]">Apply</button>
                 </div>
-                <div class="h-[2px] bg-white mb-[10px] w-[170px] mt-[15px] ml-[10px]"></div>
+                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
                 <div class="mt-[10px] ml-[10px]">
-                  <span>Total</span>
+                  <span class="ml-[10px]">Total</span>
                   <span class="ml-[200px]">$112</span>
                 </div>
             </div>

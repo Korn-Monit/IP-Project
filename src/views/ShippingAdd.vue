@@ -47,46 +47,88 @@
         
         <div class="bg-white w-[100%] h-[600px] pt-[50px]">
             <div class="flex justify-center gap-x-[70px]">
+              <!-- <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div> -->
               <div>
-                <h1 class="text-[20px] mb-[20px]"> <b>Your Card</b></h1>
-                <div class="h-[1px] bg-black mb-[10px]"></div>
                 <div>
-                    <span><b>Item</b></span>
-                    <span class="ml-[400px]"><b>Price</b></span>
-                    <span class="ml-[50px]" ><b>Quantity</b></span>
+                    <span class="text-[20px]"><b>Shipping Address</b></span>
+                    <span class="ml-[30px] text-[20px]">12 Waldo Point Road, Mishauken, NY 11200</span>
+                    <span class="ml-[100px] text-purple-600 text-[20px]">Edit</span>
                 </div>
-                <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div>
-                <div class="flex items-center">
-                    <span>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWnFbaQ9t-dZkzcpKYwda8pinLxIaFgzahNUpFejd34RbsvHg" alt="" class="border-3 border-black h-[150px]">
-                    </span>
-                    <span class="ml-[5px]"><b>Nike OVERBREAK</b></span>
-                    <span class="ml-[70px]"><b>$112</b></span>
-                    <span class="ml-[70px]"><b>1</b></span>
-                </div>
-                <div class="h-[1px] bg-[rgb(148,163,184)] mb-[10px] mt-[10px]"></div>
-                <h1 class="ml-[450px]">Subtotal: <b>$112</b></h1>
-                <div class="h-[1px] bg-[rgb(148,163,184)] mt-[10px]"></div>
-            </div>
-            <div class="w-[200px] h-[220px] bg-gray-300">
-                <h1 class="ml-[10px]"><b>Summary (1 item)</b></h1>
+                <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+                
+                <h1 class="mb-[20px] text-[20px]"><b>Shipping Method</b></h1>
 
-                <div class="ml-[20px] mt-[15px] mb-[5px]">
-                  <span>Subtotal</span>
-                  <span class="ml-[70px]">$112</span>
+                <div>
+                  <div>
+                    <label for="">
+                      <input type="radio" name="choice" id="">
+                      UPS Ground
+                    </label>
+                    <span class="ml-[580px]">$30</span>
+                  </div>
+
+                  <div>
+                    <label for="">
+                      <input type="radio" name="choice" id="">
+                      UPS 3 Days Select
+                    </label>
+                    <span class="ml-[535px]">$35</span>
+                  </div>
+
+                  <div>
+                    <label for="">
+                      <input type="radio" name="choice" id="">
+                      UPS 2nd Day Air
+                    </label>
+                    <span class="ml-[550px]">$40</span>
+                  </div>
+
+                  <div>
+                    <label for="">
+                      <input type="radio" name="choice" id="">
+                      UPS Next Day Air
+                    </label>
+                    <span class="ml-[545px]">$50</span>
+                  </div>
                 </div>
 
-                <h1 class="ml-[20px] mb-[5px]">Shipping</h1>
-                <h1 class="ml-[20px] mb-[5px]">Est. Taxes</h1>
-                <div class="h-[2px] bg-white mb-[10px] w-[170px] mt-[15px] ml-[10px]"></div>
-                <div class="ml-[20px]">
-                    <span><b>Total</b></span>
-                    <span class="ml-[90px]"><b>$112</b></span>
+                <div class="h-[1px] bg-black mb-[15px] mt-[40px]"></div>
+
+                <div>
+                  <button><b>Return to Customer Information</b></button>
+                  <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white">Continue to Payment Method</button>
                 </div>
-                <div class="mt-[10px]">
-                  <router-link :to="{ name: 'cusinfo'}"> 
-                    <button class="bg-indigo-800 border-2 border-black text-white ml-[10px] pt-[7px] pb-[7px] pl-[55px] pr-[55px]">Checkout</button>
-                  </router-link>  
+              </div>
+
+
+            <div class="w-[350px] h-[350px] bg-gray-300">
+                <h1 class="ml-[10px] mt-[20px]"><b>Summary (1 item)</b></h1>
+
+                <div class="ml-[20px] mt-[30px] mb-[5px]">
+                  <span class="ml-[10px]">Subtotal</span>
+                  <span class="ml-[170px]">$112</span>
+                </div>
+
+                <div>
+                  <span class="ml-[30px] mb-[5px]">Shipping</span>
+                  <span class="ml-[170px]">$30</span>
+                  
+                </div>
+                <div>
+                  <span class="ml-[30px] mb-[5px]">Est. Taxes</span>
+                  <span class="ml-[160px]">$10</span>
+                </div>
+
+                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
+                <div class="ml-[20px] mb-[10px]">Gift card or discount code</div>
+                <div>
+                    <span class="ml-[20px]"><input type="text" name="" id="" class="border-black border-[2px] h-[40px] mb-[10px]"></span>
+                    <button class="ml-[20px] border-2 border-black bg-indigo-800 text-white pl-[10px] pr-[10px] h-[40px] w-[80px]">Apply</button>
+                </div>
+                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
+                <div class="mt-[10px] ml-[10px]">
+                  <span class="ml-[10px]">Total</span>
+                  <span class="ml-[200px]">$152</span>
                 </div>
             </div>
           </div>

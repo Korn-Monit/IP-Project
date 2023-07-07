@@ -56,8 +56,13 @@ const router = createRouter({
     {
       path: "/cusinfo",
       name: "cusinfo",
-      component: () => import("../views/CusInfo.vue"),
-    }
+      component: () => import("../views/CustomerAdd.vue"),
+    },
+    {
+      path: "/shippingadd",
+      name: "shippingadd",
+      component: () => import("../views/ShippingAdd.vue"),
+    },
   ],
 });
 
