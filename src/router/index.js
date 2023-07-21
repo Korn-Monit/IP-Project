@@ -39,14 +39,14 @@ const router = createRouter({
       component: ()=> import("../views/AboutView.vue")
     },
     {
-      path: "/quickview",
-      name: "view",
-      component: () => import("../views/QuickView.vue"),
-    },
-    {
       path: "/contactus",
       name: "contactus",
       component: () => import("../views/ContactUs.vue"),
+    },
+    {
+      path: "/quickview",
+      name: "view",
+      component: () => import("../views/QuickView.vue"),
     },
     {
       path: "/card",
@@ -63,6 +63,16 @@ const router = createRouter({
       name: "shippingadd",
       component: () => import("../views/ShippingAdd.vue"),
     },
+    {
+      path: "/conorder",
+      name: "conorder",
+      component: () => import("../views/ConfirmOrder.vue"),
+    },
+    {
+      path: "/ordercomplete",
+      name: "ordercomplete",
+      component: () => import("../views/OrderComplete.vue"),
+    }
   ],
 });
 

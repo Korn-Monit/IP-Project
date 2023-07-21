@@ -47,92 +47,91 @@
         
         <div class="bg-white w-[100%] h-[600px] pt-[50px]">
             <div class="flex justify-center gap-x-[70px]">
-              <!-- <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div> -->
-              <div>
+                <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div>
                 <div>
-                    <span class="text-[20px]"><b>Shipping Address</b></span>
-                    <span class="ml-[30px] text-[20px]">12 Waldo Point Road, Mishauken, NY 11200</span>
-                    <span class="ml-[100px] text-purple-600 text-[20px]">Edit</span>
-                </div>
-                <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
-                
-                <h1 class="mb-[20px] text-[20px]"><b>Shipping Method</b></h1>
+                    <div>
+                        <span class="text-[20px]"><b>Shipping Address</b></span>
+                        <span class="ml-[30px] text-[20px]">12 Waldo Point Road, Mishauken, NY 11200</span>
+                        <span class="ml-[100px] text-purple-600 text-[20px]">Edit</span>
+                    </div>
+                    <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+                    <div>
+                        <span class="text-[20px]"><b>Shipping Method</b></span>
+                        <span class="ml-[40px] text-[20px]">UPS Ground, $30</span>
+                        <span class="ml-[335px] text-purple-600 text-[20px]">Edit</span>
+                    </div>
+                    <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+                    <h1 class="text-[20px]"><strong>Payment Method</strong></h1>
+                    <div>
+                        <input type="text" name="" id="" placeholder="Card Number" class="border-2 border-black w-[620px] h-[50px] indent-[10px] mr-[10px] mb-[10px]">
+                    </div>
+                    <div>
+                        <input type="text" name="" id="" placeholder="Name on Card" class="border-2 border-black mr-[10px] mb-[10px] w-[200px] h-[50px] indent-[10px]">
+                        <input type="text" name="" id="" placeholder="MM/YY" class="border-2 border-black w-[200px] h-[50px] indent-[10px] mr-[10px] mb-[10px]">
+                        <input type="text" name="" id="" placeholder="CVV" class="border-2 border-black w-[200px] h-[50px] indent-[10px]">
+                    </div>
+                    <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+                    <span class="text-[20px]"><b>Billing Address</b></span>
 
-                <div>
-                  <div>
-                    <label for="">
-                      <input type="radio" name="choice" id="">
-                      UPS Ground
-                    </label>
-                    <span class="ml-[580px]">$30</span>
-                  </div>
-
-                  <div>
-                    <label for="">
-                      <input type="radio" name="choice" id="">
-                      UPS 3 Days Select
-                    </label>
-                    <span class="ml-[535px]">$35</span>
-                  </div>
-
-                  <div>
-                    <label for="">
-                      <input type="radio" name="choice" id="">
-                      UPS 2nd Day Air
-                    </label>
-                    <span class="ml-[550px]">$40</span>
-                  </div>
-
-                  <div>
-                    <label for="">
-                      <input type="radio" name="choice" id="">
-                      UPS Next Day Air
-                    </label>
-                    <span class="ml-[545px]">$50</span>
-                  </div>
-                </div>
-
-                <div class="h-[1px] bg-black mb-[15px] mt-[40px]"></div>
-
-                <div>
-                  <button><b>Return to Customer Information</b></button>
-                  <router-link :to="{name: 'conorder'}">
-                    <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white">Continue to Payment Method</button>
-                  </router-link>
-                </div>
-              </div>
-
-
-            <div class="w-[350px] h-[350px] bg-gray-300">
-                <h1 class="ml-[10px] mt-[20px]"><b>Summary (1 item)</b></h1>
-
-                <div class="ml-[20px] mt-[30px] mb-[5px]">
-                  <span class="ml-[10px]">Subtotal</span>
-                  <span class="ml-[170px]">$112</span>
+                    <div class="border-2 border-black p-2">
+                        <label for="">
+                            <input type="radio" name="choice" id="">
+                            Same as shipping address
+                        </label>
+                    </div>
+                    <div class="border-2 border-black p-2">
+                        <label for="">
+                            <input type="radio" name="choice" id="">
+                            Use a different billing address
+                        </label>
+                    </div>
+                    <span class="text-[20px]"><b>Remember Me</b></span>
+                    <div class="border-2 border-black p-2">
+                        <label for="">
+                            <input type="checkbox" name="choice" id="">
+                            Save my information for a faster checkout
+                        </label>
+                    </div>
+                    <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
+                    <div>
+                        <button><b>Return to Customer Information</b></button>
+                        <router-link :to="{name: 'ordercomplete'}"> 
+                          <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white">
+                          Complete Order </button>
+                        </router-link>
+                    </div>
                 </div>
 
-                <div>
-                  <span class="ml-[30px] mb-[5px]">Shipping</span>
-                  <span class="ml-[170px]">$30</span>
-                  
-                </div>
-                <div>
-                  <span class="ml-[30px] mb-[5px]">Est. Taxes</span>
-                  <span class="ml-[160px]">$10</span>
-                </div>
+                <div class="w-[350px] h-[350px] bg-gray-300">
+                    <h1 class="ml-[10px] mt-[20px]"><b>Summary (1 item)</b></h1>
 
-                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
-                <div class="ml-[20px] mb-[10px]">Gift card or discount code</div>
-                <div>
-                    <span class="ml-[20px]"><input type="text" name="" id="" class="border-black border-[2px] h-[40px] mb-[10px]"></span>
-                    <button class="ml-[20px] border-2 border-black bg-indigo-800 text-white pl-[10px] pr-[10px] h-[40px] w-[80px]">Apply</button>
+                    <div class="ml-[20px] mt-[30px] mb-[5px]">
+                    <span class="ml-[10px]">Subtotal</span>
+                    <span class="ml-[170px]">$112</span>
+                    </div>
+
+                    <div>
+                    <span class="ml-[30px] mb-[5px]">Shipping</span>
+                    <span class="ml-[170px]">$30</span>
+                    
+                    </div>
+                    <div>
+                    <span class="ml-[30px] mb-[5px]">Est. Taxes</span>
+                    <span class="ml-[160px]">$10</span>
+                    </div>
+
+                    <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
+                    <div class="ml-[20px] mb-[10px]">Gift card or discount code</div>
+                    <div>
+                        <span class="ml-[20px]"><input type="text" name="" id="" class="border-black border-[2px] h-[40px] mb-[10px]"></span>
+                        <button class="ml-[20px] border-2 border-black bg-indigo-800 text-white pl-[10px] pr-[10px] h-[40px] w-[80px]">Apply</button>
+                    </div>
+                    <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
+                    <div class="mt-[10px] ml-[10px]">
+                    <span class="ml-[10px]">Total</span>
+                    <span class="ml-[200px]">$152</span>
+                    </div>
                 </div>
-                <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
-                <div class="mt-[10px] ml-[10px]">
-                  <span class="ml-[10px]">Total</span>
-                  <span class="ml-[200px]">$152</span>
-                </div>
-            </div>
           </div>
         </div>
       <!-- footer -->
