@@ -44,27 +44,27 @@ const router = createRouter({
       component: () => import("../views/ContactUs.vue"),
     },
     {
-      path: "/quickview",
+      path: "/quickview/:imageUrl/:name/:price",
       name: "view",
       component: () => import("../views/QuickView.vue"),
     },
     {
-      path: "/card",
+      path: "/card/:imageUrl/:price/:name",
       name: "card",
       component: () => import("../views/Card.vue"),
     },
     {
-      path: "/cusinfo",
+      path: "/cusinfo/:price/",
       name: "cusinfo",
       component: () => import("../views/CustomerAdd.vue"),
     },
     {
-      path: "/shippingadd",
+      path: "/shippingadd/:price",
       name: "shippingadd",
       component: () => import("../views/ShippingAdd.vue"),
     },
     {
-      path: "/conorder",
+      path: "/conorder/:price",
       name: "conorder",
       component: () => import("../views/ConfirmOrder.vue"),
     },

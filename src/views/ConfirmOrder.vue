@@ -107,7 +107,7 @@
 
                     <div class="ml-[20px] mt-[30px] mb-[5px]">
                     <span class="ml-[10px]">Subtotal</span>
-                    <span class="ml-[170px]">$112</span>
+                    <span class="ml-[170px]">${{ $route.params.price }}</span>
                     </div>
 
                     <div>
@@ -129,7 +129,7 @@
                     <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
                     <div class="mt-[10px] ml-[10px]">
                     <span class="ml-[10px]">Total</span>
-                    <span class="ml-[200px]">$152</span>
+                    <span class="ml-[200px]">$140</span>
                     </div>
                 </div>
           </div>

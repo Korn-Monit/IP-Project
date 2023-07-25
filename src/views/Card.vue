@@ -48,46 +48,50 @@
         <div class="bg-white w-[100%] h-[600px] pt-[50px]">
             <div class="flex justify-center gap-x-[70px]">
               <div>
-                <h1 class="text-[20px] mb-[20px]"> <b>Your Card</b></h1>
+                <h1 class="text-[30px] mb-[20px]"> <b>Your Card</b></h1>
                 <div class="h-[1px] bg-black mb-[10px]"></div>
                 <div>
-                    <span><b>Item</b></span>
-                    <span class="ml-[400px]"><b>Price</b></span>
-                    <span class="ml-[50px]" ><b>Quantity</b></span>
+                    <span class="text-[25px]"><b>Item</b></span>
+                    <span class="ml-[400px] text-[25px]"><b>Price</b></span>
+                    <span class="ml-[50px] text-[25px]" ><b>Quantity</b></span>
                 </div>
                 <div class="h-[1px] bg-black mb-[20px] mt-[10px]"></div>
                 <div class="flex items-center">
                     <span>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWnFbaQ9t-dZkzcpKYwda8pinLxIaFgzahNUpFejd34RbsvHg" alt="" class="border-3 border-black h-[150px]">
+                        <img :src="$route.params.imageUrl">
                     </span>
-                    <span class="ml-[5px]"><b>Nike OVERBREAK</b></span>
-                    <span class="ml-[70px]"><b>$112</b></span>
-                    <span class="ml-[70px]"><b>1</b></span>
+                    <span class="ml-[5px] text-[25px]"><b>{{ $route.params.name }}</b></span>
+                    <span class="ml-[120px] text-[25px]"><b>${{ $route.params.price }}</b></span>
+                    <span class="ml-[70px] text-[25px]"><b>1</b></span>
                 </div>
                 <div class="h-[1px] bg-[rgb(148,163,184)] mb-[10px] mt-[10px]"></div>
-                <h1 class="ml-[450px]">Subtotal: <b>$112</b></h1>
-                <div class="h-[1px] bg-[rgb(148,163,184)] mt-[10px]"></div>
+                <h1 class="ml-[450px] text-[25px]">Subtotal: <b>${{ $route.params.price }}</b></h1>
+                <div class="h-[1px] bg-[rgb(55,56,56)] mt-[10px]"></div>
             </div>
-            <div class="w-[200px] h-[220px] bg-gray-300">
-                <h1 class="ml-[10px]"><b>Summary (1 item)</b></h1>
+            <div class="w-[400px] h-[320px] bg-gray-300">
+              <div class="ml-[30px]">
+                <h1 class="ml-[10px] text-[25px] mt-[20px]"><b>Summary (1 item)</b>
+                </h1>
 
-                <div class="ml-[20px] mt-[15px] mb-[5px]">
-                  <span>Subtotal</span>
-                  <span class="ml-[70px]">$112</span>
-                </div>
+                  <div class="ml-[20px] mt-[15px] mb-[5px]">
+                    <span class="text-[20px]">Subtotal</span>
+                    <span class="ml-[70px] text-[20px]">${{ $route.params.price }}</span>
+                  </div>
 
-                <h1 class="ml-[20px] mb-[5px]">Shipping</h1>
-                <h1 class="ml-[20px] mb-[5px]">Est. Taxes</h1>
-                <div class="h-[2px] bg-white mb-[10px] w-[170px] mt-[15px] ml-[10px]"></div>
-                <div class="ml-[20px]">
-                    <span><b>Total</b></span>
-                    <span class="ml-[90px]"><b>$112</b></span>
-                </div>
-                <div class="mt-[10px]">
-                  <router-link :to="{ name: 'cusinfo'}"> 
-                    <button class="bg-indigo-800 border-2 border-black text-white ml-[10px] pt-[7px] pb-[7px] pl-[55px] pr-[55px]">Checkout</button>
-                  </router-link>  
-                </div>
+                  <h1 class="ml-[20px] mb-[10px] text-[20px]">Shipping</h1>
+                  <h1 class="ml-[20px] mb-[10px] text-[20px]">Est. Taxes</h1>
+                  <div class="h-[2px] bg-white mb-[10px] w-[170px] mt-[15px] ml-[10px]"></div>
+                  <div class="ml-[20px]">
+                      <span><b class="text-[20px] mb-[20px]">Total</b></span>
+                      <span class="ml-[90px] text-[20px]"><b>${{ $route.params.price }}</b></span>
+                  </div>
+                  <div class="mt-[20px]">
+                    <router-link :to="{ name: 'cusinfo'}"> 
+                      <button class="bg-indigo-800 border-2 border-black text-white ml-[10px] pt-[7px] pb-[7px] pl-[55px] pr-[55px] text-[20px] w-[300px]">Checkout</button>
+                    </router-link>  
+                  </div>
+              </div>
+
             </div>
           </div>
         </div>

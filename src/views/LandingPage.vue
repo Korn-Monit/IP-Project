@@ -87,18 +87,19 @@
             </div>
   
             <div class="flex justify-evenly ">
-              <div>
-                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSUdwFwR1CaRWCGe_byoandSkYJSssOGpwzypwSlDTC6YLqD1aG" alt="" class="w-[200px] h-[200px]">
-                <h2><b>Nike</b></h2>
-                <p>OVERBREAK</p>
-                <p class="mt-[10px]">$112.00</p>
-                <router-link :to="{ name: 'view' }">
-                  <button class="border-3 border-black p-2 hover:bg-[rgb(240,188,92)]">
+              <div v-for=" (productt, index) in products" :key="index">
+                <img :src="productt.image">
+                <h2 class="text-[25px]"><b>{{ productt.branch }}</b></h2>
+                <p class="text-[25px]">{{ productt.name }}</p>
+                <p class="mt-[10px] text-[20px]">${{productt.price}}</p>
+                <router-link :to="{ name: 'view', params: { imageUrl: productt.image, name: productt.name, price: productt.price } }">
+                  <button class="border-3 border-black p-[15px] hover:bg-[rgb(240,188,92)]">
                     <b>QUICK VIEW</b> 
                   </button>
                 </router-link>
               </div>
-              <div>
+
+              <!-- <div>
                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTGgA8tK2Kd7cT5kPUlJq9vY2CWoQPR98-2A1rbsmh0SemesWH8" alt="" class="w-[200px] h-[200px]">
                 <h2><b>Nike</b></h2>
                 <p>ACG AIR MOWABB</p>
@@ -108,8 +109,9 @@
                     <b>QUICK VIEW</b>
                   </button>
                 </router-link>
-              </div>
-              <div>
+              </div> -->
+
+              <!-- <div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcp-fgQEmUIF6iXdK4e_ZdT7mcIwwioEQcZ6JJtMxPtYo7AJ7" alt="" class="w-[200px] h-[200px]">
                 <h2><b>Nike</b></h2>
                 <p>OVERBREAK</p>
@@ -119,8 +121,9 @@
                     <b>QUICK VIEW</b>
                   </button>
                 </router-link>
-              </div>
-              <div>
+              </div> -->
+
+              <!-- <div>
                 <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRxsvn_2WPcQLy5eH7jkVfOc1j8vN1zsNROmw2Ovxjt_CSmczYb" alt="" class="w-[200px] h-[200px]">
                 <h2><b>Nike</b></h2>
                 <p>AIR FORCE 1 '07 CRAFT</p>
@@ -130,8 +133,9 @@
                     <b>QUICK VIEW</b>
                   </button>
                 </router-link>
-              </div>
-              <div>
+              </div> -->
+
+              <!-- <div>
                 <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSwK1F0G-9P6HgZJmJPi4ebaBWoANuTJqolFLgcwzJ4gMu9SCJg" alt="" class="w-[200px] h-[200px]">
                 <h2><b>Nike</b></h2>
                 <p>BLAZER MID '77 VINTAGE</p>
@@ -141,9 +145,9 @@
                     <b>QUICK VIEW</b>
                   </button>
                 </router-link>
-              </div>
+              </div> -->
             </div>
-            <!-- <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHuZ0PV53kULFnyZSv1yII5HIKjeC7Y7Sy5-osqeuTXWiEwjb6" alt=""> -->
+ 
           </div>
   
       <!-- Display the JSON data -->
@@ -171,7 +175,7 @@
     </div>
   </template>
   
-  <script>
+<script>
   import axios from 'axios';
   import { useRouter } from 'vue-router';
   
@@ -180,26 +184,28 @@
       return {
         jsonData: null,
         showPopup: false,
+        products: []
       };
     },
-    // mounted() {
-    //   axios
-    //     .get('http://localhost:3000/api/data')
-    //     .then(response => {
-    //       this.jsonData = response.data;
-    //     })
-    //     .catch(error => {
-    //       console.error(error);
-    //     });
-    // },
+    mounted() {
+      this.getProduct();
+    },
 
     methods: {
       closePopup() {
         this.showPopup = false;
+      },
+
+      getProduct(){
+        axios.get('http://127.0.0.1:8000/api/getProduct').then( res =>{
+          this.products = res.data;
+        }).catch(error => {
+          console.error('Error fetching data:', error);
+        });
       }
     }
   };
-  </script>
+</script>
   
   <style>
     @media (min-width: 1024px) {
