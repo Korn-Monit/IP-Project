@@ -1,47 +1,73 @@
 <template>
     <!-- Header code here -->
-      <header class="header">
-            <div>
-                <span>
-                  <router-link :to="{ name: 'home' }">
-                    <button>
-                      <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
-                    </button>
-                  </router-link>
-                </span>
-                <span class="nom ml-[20px] p">
-                    <router-link :to="{ name: 'home' }">
-                      <button>ZL-SNICKERS</button>
-                    </router-link>
-                </span>
-            </div>
-            <div class="t"><a href="/about">About</a> </div>
-            <div class="t"><a href="/">Categories</a></div>
-            <div class="t"><a href="/">Contact</a></div>
+    <header class="header">
+      <router-link :to="{ name: 'home' }">
+        <button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png"
+            alt=""
+            style="margin-top: 5px"
+            class="h-[60px]"
+          />
+        </button>
+      </router-link>
 
-            <div>
-              <input class="search m" type="text" placeholder="search">
-              <button type="submit" class="">
-                <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
-              </button>
-            </div>
+      <div class="nom">
+        <router-link :to="{ name: 'home' }">
+          <button>ZL-SNICKERS</button>
+        </router-link>
+      </div>
+      <div class="t"><a href="/about">About</a></div>
+      <div class="t"><a href="">Categories</a></div>
+      <div class="t"><a href="">Contact</a></div>
 
-            <div class="flex">
-              <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
-              <span class="en mt-[25px] ml-[5px]" >EN</span>
-            </div>
+      <div>
+        <input class="search m" type="text" placeholder="search" />
+        <button type="submit" class="">
+          <img
+            class="h-[20px] mt-[15px]"
+            src="https://cdn-icons-png.flaticon.com/128/151/151773.png"
+            alt=""
+          />
+        </button>
+      </div>
 
-            <div>
-                  <router-link :to="{ name: 'landingpage' }">
-                      <button class="flex">
-                          <span>
-                              <img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png" alt="" class="h-[25px] mt-[25px]">
-                          </span>
-                          <span class="pt-[25px] ml-[5px]">Logout</span>
-                      </button>
-                  </router-link>
-            </div>
-      </header>
+      <div class="flex">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png"
+          alt=""
+          class="w-[30px] h-[30px] mt-[22px]"
+        />
+        <span class="en mt-[25px] ml-[5px]">EN</span>
+      </div>
+      <!-- cart icon-->
+      <div>
+        <router-link :to="{ name: 'cartdata'}">
+          <button>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png"
+              alt=""
+              class="h-[25px] mt-[25px]"
+            />
+          </button>
+        </router-link>
+      </div>
+
+      <div>
+        <router-link :to="{ name: 'landingpage' }">
+          <button class="flex">
+            <span>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png"
+                alt=""
+                class="h-[25px] mt-[25px]"
+              />
+            </span>
+            <span class="pt-[25px] ml-[5px]">Logout</span>
+          </button>
+        </router-link>
+      </div>
+    </header>
 
       <div class="bg-white w-[100%] h-[600px]">
         <div class="w-[700px] ml-[200px]">

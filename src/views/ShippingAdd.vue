@@ -51,8 +51,8 @@
               <div>
                 <div>
                     <span class="text-[20px]"><b>Shipping Address</b></span>
-                    <span class="ml-[30px] text-[20px]">12 Waldo Point Road, Mishauken, NY 11200</span>
-                    <span class="ml-[100px] text-purple-600 text-[20px]">Edit</span>
+                    <span class="ml-[20px] text-[20px]">63 Street</span>
+                    <span class="ml-[400px] text-purple-600 text-[20px]">Edit</span>
                 </div>
                 <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
                 
@@ -61,7 +61,7 @@
                 <div>
                   <div>
                     <label for="">
-                      <input type="radio" name="choice" id="">
+                      <input type="radio" name="choice" id="" @click="selectMethod('UPS Ground',30)">
                       UPS Ground
                     </label>
                     <span class="ml-[580px]">$30</span>
@@ -69,7 +69,7 @@
 
                   <div>
                     <label for="">
-                      <input type="radio" name="choice" id="">
+                      <input type="radio" name="choice" id="" @click="selectMethod('UPS 3 Days Select',35)">
                       UPS 3 Days Select
                     </label>
                     <span class="ml-[535px]">$35</span>
@@ -77,7 +77,7 @@
 
                   <div>
                     <label for="">
-                      <input type="radio" name="choice" id="">
+                      <input type="radio" name="choice" id="" @click="selectMethod('UPS 2nd Day Air',40)"> 
                       UPS 2nd Day Air
                     </label>
                     <span class="ml-[550px]">$40</span>
@@ -85,7 +85,7 @@
 
                   <div>
                     <label for="">
-                      <input type="radio" name="choice" id="">
+                      <input type="radio" name="choice" id="" @click="selectMethod('UPS Next Day Air',50)">
                       UPS Next Day Air
                     </label>
                     <span class="ml-[545px]">$50</span>
@@ -96,8 +96,8 @@
 
                 <div>
                   <button><b>Return to Customer Information</b></button>
-                  <router-link :to="{name: 'conorder'}">
-                    <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white">Continue to Payment Method</button>
+                  <router-link :to="{ name: 'conorder' }">
+                    <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white" @click="addShippingMethod()"> Continue to Payment Method</button>
                   </router-link>
                 </div>
               </div>
@@ -109,16 +109,6 @@
                 <div class="ml-[20px] mt-[30px] mb-[5px]">
                   <span class="ml-[10px]">Subtotal</span>
                   <span class="ml-[170px]">${{ $route.params.price }}</span>
-                </div>
-
-                <div>
-                  <span class="ml-[30px] mb-[5px]">Shipping</span>
-                  <span class="ml-[170px]">$30</span>
-                  
-                </div>
-                <div>
-                  <span class="ml-[30px] mb-[5px]">Est. Taxes</span>
-                  <span class="ml-[160px]">$10</span>
                 </div>
 
                 <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
@@ -162,6 +152,8 @@
     data() {
       return {
         jsonData: null,
+        selectShipping: '',
+        slectionNum: 0
       };
     },
     // mounted() {
@@ -174,8 +166,20 @@
     //       console.error(error);
     //     });
     // },
-    // methods: {
-    // }
+    methods: {
+      selectMethod(selectShipping,slectionNum){
+        this.selectShipping = selectShipping;
+        this.slectionNum = slectionNum;
+      },
+
+      addShippingMethod() {
+        const cartData = {
+              name: this.selectShipping,
+              price: this.slectionNum,
+        };
+        this.$store.dispatch('storeShippingMethod', cartData);
+      },
+    }
   };
   </script>
   

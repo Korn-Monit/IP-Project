@@ -3,73 +3,47 @@
     <div >
       <!-- Header code here -->
       <header class="header">
-      <router-link :to="{ name: 'home' }">
-        <button>
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png"
-            alt=""
-            style="margin-top: 5px"
-            class="h-[60px]"
-          />
-        </button>
-      </router-link>
-
-      <div class="nom">
-        <router-link :to="{ name: 'home' }">
-          <button>ZL-SNICKERS</button>
-        </router-link>
-      </div>
-      <div class="t"><a href="/about">About</a></div>
-      <div class="t"><a href="">Categories</a></div>
-      <div class="t"><a href="">Contact</a></div>
-
-      <div>
-        <input class="search m" type="text" placeholder="search" />
-        <button type="submit" class="">
-          <img
-            class="h-[20px] mt-[15px]"
-            src="https://cdn-icons-png.flaticon.com/128/151/151773.png"
-            alt=""
-          />
-        </button>
-      </div>
-
-      <div class="flex">
-        <img
-          src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png"
-          alt=""
-          class="w-[30px] h-[30px] mt-[22px]"
-        />
-        <span class="en mt-[25px] ml-[5px]">EN</span>
-      </div>
-      <!-- cart icon-->
-      <div>
-        <router-link :to="{ name: 'cartdata'}">
-          <button>
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png"
-              alt=""
-              class="h-[25px] mt-[25px]"
-            />
-          </button>
-        </router-link>
-      </div>
-
-      <div>
-        <router-link :to="{ name: 'landingpage' }">
-          <button class="flex">
-            <span>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png"
-                alt=""
-                class="h-[25px] mt-[25px]"
-              />
-            </span>
-            <span class="pt-[25px] ml-[5px]">Logout</span>
-          </button>
-        </router-link>
-      </div>
-    </header>
+              <div>
+                  <span>
+                    <router-link :to="{ name: 'home' }">
+                      <button>
+                        <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
+                      </button>
+                    </router-link>
+                  </span>
+                  <span class="nom ml-[20px] p">
+                      <router-link :to="{ name: 'home' }">
+                        <button>ZL-SNICKERS</button>
+                      </router-link>
+                  </span>
+              </div>
+              <div class="t"><a href="/about">About</a> </div>
+              <div class="t"><a href="/">Categories</a></div>
+              <div class="t"><a href="/">Contact</a></div>
+  
+              <div>
+                <input class="search m" type="text" placeholder="search">
+                <button type="submit" class="">
+                  <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
+                </button>
+              </div>
+  
+              <div class="flex">
+                <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
+                <span class="en mt-[25px] ml-[5px]" >EN</span>
+              </div>
+  
+              <div>
+                    <router-link :to="{ name: 'landingpage' }">
+                        <button class="flex">
+                            <span>
+                                <img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png" alt="" class="h-[25px] mt-[25px]">
+                            </span>
+                            <span class="pt-[25px] ml-[5px]">Logout</span>
+                        </button>
+                    </router-link>
+              </div>
+        </header>
         
         <div class="bg-white w-[100%] h-[600px] pt-[50px]">
             <div class="flex justify-center gap-x-[70px]">
@@ -96,7 +70,7 @@
             </div>
             <div class="w-[400px] h-[320px] bg-gray-300">
               <div class="ml-[30px]">
-                <h1 class="ml-[10px] text-[25px] mt-[20px]"><b>Summary (0 item)</b>
+                <h1 class="ml-[10px] text-[25px] mt-[20px]"><b>Summary (1 item)</b>
                 </h1>
 
                   <div class="ml-[20px] mt-[15px] mb-[5px]">
@@ -112,9 +86,9 @@
                       <span class="ml-[90px] text-[20px]"><b>${{ $route.params.price }}</b></span>
                   </div>
                   <div class="mt-[20px]">
-                    <router-link :to="{ name: 'cusinfo'}"> 
+                    <!-- <router-link :to="{ name: 'cusinfo'}">  -->
                       <button class="bg-indigo-800 border-2 border-black text-white ml-[10px] pt-[7px] pb-[7px] pl-[55px] pr-[55px] text-[20px] w-[300px]">Checkout</button>
-                    </router-link>  
+                    <!-- </router-link>   -->
                   </div>
               </div>
 

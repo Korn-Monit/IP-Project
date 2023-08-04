@@ -5,21 +5,23 @@
       <header class="header">
               <div>
                   <span>
-                    <router-link :to="{ name: 'home' }">
+                    <router-link :to="{ name: '' }">
                       <button>
                         <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
                       </button>
                     </router-link>
                   </span>
-                  <span class="nom ml-[20px]">
-                      <router-link :to="{ name: 'home' }">
-                        <button class="">ZL-SNICKERS</button>
+              </div>
+              <div class="mt-[20px]">
+                <span class="nom">
+                      <router-link :to="{ name: '' }">
+                        <button class="">ZL-SNEAKERS</button>
                       </router-link>
                   </span>
               </div>
-              <div class="t"><a href="/about">About</a> </div>
+              <div class="t"><a href="/">About</a> </div>
               <div class="t"><a href="">Categories</a></div>
-              <div class="t"><a href="/contactus">Contact</a></div>
+              <div class="t"><a href="/">Contact</a></div>
               
               <!-- search -->
               <!-- <form action=""> -->
@@ -58,28 +60,35 @@
                   <span>Login</span>
 
                   
-                  <form>
-                    
+                  <form>      
                     <div class="user-box">
-                      <input type="text" name="" required="">
+                      <input type="text" name="" required v-model="username">
                       <label>Username</label>
                     </div>
                     <div class="user-box">
-                      <input type="password" name="" required="">
+                      <input type="password" name="" required v-model="password">
                       <label>Password</label>
                     </div>
 
-                    <router-link :to="{ name: 'home' }">
-                      <button class="login-btn">Login</button>
-                    </router-link>
+             
+                      <div v-if="isTrue">
+                        <router-link :to="{ name: 'home' }">
+                          <button class="login-btn" >Login</button>
+                        </router-link>
+                      </div>
+
+                      <div v-else disabled>
+                        <button class="login-btn">Login</button>
+                      </div>
                   </form>
+
                 </div>
               </div>
         </header>
   
   
           <!-- image -->
-          <div class="bg-white w-[100%] h-[600px]">
+          <div class="bg-white w-[100%] h-screen">
             <div class="titre">
               <b>
                 Welcome to ZL-SNICKERS
@@ -88,12 +97,13 @@
   
             <div class="flex justify-evenly ">
               <div v-for=" (productt, index) in products" :key="index">
-                <img :src="productt.image">
-                <h2 class="text-[25px]"><b>{{ productt.branch }}</b></h2>
-                <p class="text-[25px]">{{ productt.name }}</p>
-                <p class="mt-[10px] text-[20px]">${{productt.price}}</p>
-                <router-link :to="{ name: 'view', params: { imageUrl: productt.image, name: productt.name, price: productt.price } }">
-                  <button class="border-3 border-black p-[15px] hover:bg-[rgb(240,188,92)]">
+                <img :src="productt.image" class="h-[150px] w-[150px]">
+                <h2 class="text-[20px]"><b>{{ productt.branch }}</b></h2>
+                <p class="text-[20px]">{{ productt.name }}</p>
+                <p class="mt-[10px] text-[15px]">${{productt.price}}</p>
+                <!--  -->
+                <router-link :to="{name: 'quickviewnotaddcart', params: { imageUrl: productt.image, name: productt.name, price: productt.price, product_id: productt.id } }">
+                  <button class="border-3 border-black p-[5px] hover:bg-[rgb(240,188,92)] ">
                     <b>QUICK VIEW</b> 
                   </button>
                 </router-link>
@@ -176,19 +186,24 @@
   </template>
   
 <script>
-  import axios from 'axios';
   import { useRouter } from 'vue-router';
+  import { listProduct } from '../api/product';
+  import {listUser} from '../api/user';
   
   export default {
     data() {
       return {
         jsonData: null,
         showPopup: false,
-        products: []
+        products: [],
+        users: [],
+        username: '',
+        password: ''
       };
     },
     mounted() {
       this.getProduct();
+      this.displayUser();
     },
 
     methods: {
@@ -197,11 +212,27 @@
       },
 
       getProduct(){
-        axios.get('http://127.0.0.1:8000/api/getProduct').then( res =>{
+        listProduct().then( res =>{
+          console.log(res);
           this.products = res.data;
         }).catch(error => {
           console.error('Error fetching data:', error);
         });
+      },
+
+      displayUser(){
+        listUser().then( res=>{
+          console.log(res);
+          this.users = res.data; 
+        })
+      }
+    },
+
+    computed: {
+      isTrue(){
+        return this.users.some(
+          (user) => user.password == this.password && user.email == this.username
+        );
       }
     }
   };
@@ -259,6 +290,7 @@
       font-size: 20px;
     }
   
+
     .nom{
       margin-top: 25px;
       font-size: 25px;

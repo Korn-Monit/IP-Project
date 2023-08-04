@@ -1,5 +1,5 @@
 <template>
-        <header class="header">
+<header class="header">
       <router-link :to="{ name: 'home' }">
         <button>
           <img
@@ -69,104 +69,7 @@
     </header>
 
   <div class="bg-white w-[100%] h-[600px]">
-    <div class="flex justify-center gap-x-[40px] pt-[50px]">
-      <img
-        :src="$route.params.imageUrl" alt=""
-        class="h-[350px] border-2 border-black"
-      />
-
-      <div>
-        <div class="mb-[10px]">
-          <span class="text-[30px]"><b>{{ $route.params.name }}</b></span>
-          <span class="ml-[100px] text-[30px]"> <b>${{ $route.params.price }}</b> </span>
-        </div>
-        <div class="h-[1px] bg-black"></div>
-        <div class="mb-[10px]">
-          <span class="ml-[5px] text-sky-600 underline-offset-1 underline"
-            >Size Chart</span>
-        </div>
-        <div class="mb-[20px]">
-          <!-- <span
-            class="border-2 border-black pt-[10px] pb-[10px] pr-[60px] pl-[60px]"
-            >Woman</span
-          > -->
-            <strong>Choose Gender:</strong>
-            <select class="border-2 border-black ml-[50px] pt-[10px] pb-[10px] pr-[60px] pl-[60px]" v-model="gender">
-              <option value="man">Man</option>
-              <option value="woman">Woman</option>
-            </select>
-          <!-- <span
-            class="border-2 border-black ml-[50px] pt-[10px] pb-[10px] pr-[60px] pl-[60px]"
-            >Man</span> -->
-        </div>
-        <div class="mb-[20px]">
-            <strong>Choose Size:</strong>
-            <select class="border-2 border-black ml-[75px] pt-[10px] pb-[10px] pr-[60px] pl-[60px]" v-model="sizeSelection">
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-            </select>
-        </div>
-        <div class="h-[1px] bg-black mb-[10px]"></div>
-        <div class="mb-[20px]">
-            <strong>Choose amount:</strong>
-            <select class="border-2 border-black ml-[50px] pt-[10px] pb-[10px] pr-[60px] pl-[60px]" v-model="amountSelection">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-        </div>
-        <div class="h-[1px] bg-black mb-[10px]"></div>
-        <div class="mb-[15px]">
-          <router-link :to="{ name: 'card' }">
-            <button @click="addToCart()"
-              class="border-2 border-black bg-violet-500 text-center pt-[10px] pb-[10px] pr-[60px] pl-[60px]">
-              <b>Add To Card</b>
-            </button>
-          </router-link>
-        </div>
-      </div>
-    </div>
-
-    <div class="h-[2px] bg-slate-400 w-[90%] ml-[5%]"></div>
-    <div>
-      <h1 class="ml-[80px]">
-        <b>Related Products</b>
-      </h1>
-
-      <div class="flex justify-evenly">
-        <img
-          src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5b0981ff-45f8-40c3-9372-32430a62aaea/dunk-high-womens-shoes-cF9txG.png"
-          alt=""
-          class="h-[150px] w-[150px]"
-        />
-        <img
-          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-mens-shoes-jBrhbr.png"
-          alt=""
-          class="h-[150px] w-[150px]"
-        />
-        <img
-          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/53a1614a-a5fd-4bfe-977e-6921451ed50e/air-force-1-react-mens-shoes-WSjfs8.png"
-          alt=""
-          class="h-[150px] w-[150px]"
-        />
-        <img
-          src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/14a35c8c-dcd1-462d-97f7-1bddb677184c/dunk-low-lx-womens-shoes-kPGHX0.png"
-          alt=""
-          class="h-[150px] w-[150px]"
-        />
-        <img
-          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87d7e901-4d08-4456-9d62-07e821aff45b/air-max-90-futura-womens-shoes-kvRZ4h.png"
-          alt=""
-          class="h-[150px] w-[150px]"
-        />
-      </div>
-    </div>
+    
   </div>
 
   <footer class="footer">

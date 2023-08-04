@@ -1,38 +1,78 @@
 <template>
     <header class="header">
+      <router-link :to="{ name: 'home' }">
+        <button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png"
+            alt=""
+            style="margin-top: 5px"
+            class="h-[60px]"
+          />
+        </button>
+      </router-link>
+
+      <div class="nom">
         <router-link :to="{ name: 'home' }">
+          <button>ZL-SNICKERS</button>
+        </router-link>
+      </div>
+      <div class="t"><a href="/about">About</a></div>
+      <div class="t"><a href="">Categories</a></div>
+      <div class="t"><a href="">Contact</a></div>
+
+      <div>
+        <input class="search m" type="text" placeholder="search" />
+        <button type="submit" class="">
+          <img
+            class="h-[20px] mt-[15px]"
+            src="https://cdn-icons-png.flaticon.com/128/151/151773.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="flex">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png"
+          alt=""
+          class="w-[30px] h-[30px] mt-[22px]"
+        />
+        <span class="en mt-[25px] ml-[5px]">EN</span>
+      </div>
+      <!-- cart icon-->
+      <div>
+        <router-link :to="{ name: 'cartdata'}">
           <button>
-            <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png"
+              alt=""
+              class="h-[25px] mt-[25px]"
+            />
           </button>
         </router-link>
-  
-        <div class="nom">
-            <router-link :to="{ name: 'home' }">
-              <button>ZL-SNICKERS</button>
-            </router-link>
-        </div>
-        <div class="t"><a href="/about">About</a> </div>
-        <div class="t"><a href="">Categories</a></div>
-        <div class="t"><a href="">Contact</a></div>
-        
-        <div>
-          <input class="search m" type="text" placeholder="search">
-          <button type="submit" class="">
-            <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
+      </div>
+
+      <div>
+        <router-link :to="{ name: 'landingpage' }">
+          <button class="flex">
+            <span>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png"
+                alt=""
+                class="h-[25px] mt-[25px]"
+              />
+            </span>
+            <span class="pt-[25px] ml-[5px]">Logout</span>
           </button>
-        </div>
-  
-        <div class="flex">
-          <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
-          <span class="en mt-[25px] ml-[5px]" >EN</span>
-        </div>
-      </header>
+        </router-link>
+      </div>
+    </header>
   
       <div class="bg-white w-[100%] h-[600px] pt-[90px]">
         <div class="flex justify-center gap-x-[70px]">
                 <div>
                     <h2><b>Order 131217312</b></h2>
-                    <h2 class="text-[20px]"><b>Thank you, Justin!</b></h2>
+                    <h2 class="text-[20px]"><b>Thank you, Korn Monit!</b></h2>
                     <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
                     <h2 class="text-[20px] pb-[]"><b>Your order is confirmed</b></h2>
                     <h2>We've accepted your order and we're getting it ready</h2>
@@ -43,8 +83,8 @@
                         <div class="flex gap-x-[50px]">
                             <div>
                                 <h2 class="text-[20px]"><b>Shipping Address</b></h2>
-                                <p>Kenny Bostick</p>
-                                <div><a href="" class="underline">12 Waldo Point Road Mishauken, NY 11200 United State</a></div>
+                                <p>Phnom Penh</p>
+                                <div><a href="" class="underline">63 street</a></div>
                                 <!-- <div><a href="" class="underline"></a></div>
                                 <div><a href="" class="underline"></a></div> -->
 
@@ -54,14 +94,14 @@
                             </div>
                             <div>
                                 <h2 class="text-[20px]"><b>Billing Address</b></h2>
-                                <p>Kenny Bostick</p>
-                                <div><a href="" class="underline">12 Waldo Point Road Mishauken, NY 11200 United State</a></div>
+                                <p>Phnom Penh</p>
+                                <div><a href="" class="underline">63 street</a></div>
                                 <!-- <div><a href="" class="underline"></a></div>
                                 <div><a href="" class="underline"></a></div> -->
 
                                 <div class="mt-[30px]"></div>
                                 <h2 class="text-[20px]"><b>Payment Method</b></h2>
-                                <p>Ending in 3217-$710</p>
+                                <p>Ending in $140</p>
                             </div>
                         </div>
                     </div>
@@ -73,7 +113,7 @@
 
                     <div class="ml-[20px] mt-[30px] mb-[5px]">
                     <span class="ml-[10px]">Subtotal</span>
-                    <span class="ml-[170px]">$112</span>
+                    <span class="ml-[170px]">$100</span>
                     </div>
 
                     <div>
@@ -95,7 +135,7 @@
                     <div class="h-[4px] bg-white mb-[10px] w-[320px] mt-[15px] ml-[10px]"></div>
                     <div class="mt-[10px] ml-[10px]">
                     <span class="ml-[10px]">Total</span>
-                    <span class="ml-[200px]">$152</span>
+                    <span class="ml-[200px]">$140</span>
                     </div>
                 </div>
           </div>

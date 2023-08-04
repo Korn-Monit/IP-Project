@@ -3,47 +3,73 @@
     <div >
       <!-- Header code here -->
       <header class="header">
-              <div>
-                  <span>
-                    <router-link :to="{ name: 'home' }">
-                      <button>
-                        <img src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png" alt="" style="margin-top: 5px;" class="h-[60px]">
-                      </button>
-                    </router-link>
-                  </span>
-                  <span class="nom ml-[20px] p">
-                      <router-link :to="{ name: 'home' }">
-                        <button>ZL-SNICKERS</button>
-                      </router-link>
-                  </span>
-              </div>
-              <div class="t"><a href="/about">About</a> </div>
-              <div class="t"><a href="/">Categories</a></div>
-              <div class="t"><a href="/">Contact</a></div>
-  
-              <div>
-                <input class="search m" type="text" placeholder="search">
-                <button type="submit" class="">
-                  <img class="h-[20px] mt-[15px]" src="https://cdn-icons-png.flaticon.com/128/151/151773.png" alt="">
-                </button>
-              </div>
-  
-              <div class="flex">
-                <img src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png" alt="" class="w-[30px] h-[30px] mt-[22px]">
-                <span class="en mt-[25px] ml-[5px]" >EN</span>
-              </div>
-  
-              <div>
-                    <router-link :to="{ name: 'landingpage' }">
-                        <button class="flex">
-                            <span>
-                                <img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png" alt="" class="h-[25px] mt-[25px]">
-                            </span>
-                            <span class="pt-[25px] ml-[5px]">Logout</span>
-                        </button>
-                    </router-link>
-              </div>
-        </header>
+      <router-link :to="{ name: 'home' }">
+        <button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1137/1137134.png"
+            alt=""
+            style="margin-top: 5px"
+            class="h-[60px]"
+          />
+        </button>
+      </router-link>
+
+      <div class="nom">
+        <router-link :to="{ name: 'home' }">
+          <button>ZL-SNICKERS</button>
+        </router-link>
+      </div>
+      <div class="t"><a href="/about">About</a></div>
+      <div class="t"><a href="">Categories</a></div>
+      <div class="t"><a href="">Contact</a></div>
+
+      <div>
+        <input class="search m" type="text" placeholder="search" />
+        <button type="submit" class="">
+          <img
+            class="h-[20px] mt-[15px]"
+            src="https://cdn-icons-png.flaticon.com/128/151/151773.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="flex">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1011/1011322.png"
+          alt=""
+          class="w-[30px] h-[30px] mt-[22px]"
+        />
+        <span class="en mt-[25px] ml-[5px]">EN</span>
+      </div>
+      <!-- cart icon-->
+      <div>
+        <router-link :to="{ name: 'cartdata'}">
+          <button>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3523/3523885.png"
+              alt=""
+              class="h-[25px] mt-[25px]"
+            />
+          </button>
+        </router-link>
+      </div>
+
+      <div>
+        <router-link :to="{ name: 'landingpage' }">
+          <button class="flex">
+            <span>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png"
+                alt=""
+                class="h-[25px] mt-[25px]"
+              />
+            </span>
+            <span class="pt-[25px] ml-[5px]">Logout</span>
+          </button>
+        </router-link>
+      </div>
+    </header>
         
         <div class="bg-white w-[100%] h-[600px] pt-[50px]">
             <div class="flex justify-center gap-x-[70px]">
@@ -51,8 +77,8 @@
                 <div>
                     <div>
                         <span class="text-[20px]"><b>Shipping Address</b></span>
-                        <span class="ml-[30px] text-[20px]">12 Waldo Point Road, Mishauken, NY 11200</span>
-                        <span class="ml-[100px] text-purple-600 text-[20px]">Edit</span>
+                        <span class="ml-[30px] text-[20px]">63 Street</span>
+                        <span class="ml-[415px] text-purple-600 text-[20px]">Edit</span>
                     </div>
                     <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
                     <div>
@@ -61,9 +87,18 @@
                         <span class="ml-[335px] text-purple-600 text-[20px]">Edit</span>
                     </div>
                     <div class="h-[1px] bg-black mb-[15px] mt-[10px]"></div>
-                    <h1 class="text-[20px]"><strong>Payment Method</strong></h1>
+                    <h1 class="text-[20px]"><strong>Choose Payment Method:</strong>
+                      <label for="" class="ml-[20px]" @click="getName('VISA')">
+                        VISA
+                        <input type="radio" name="choice" id="">
+                      </label>
+                      <label for="" class="ml-[20px]">
+                        Master
+                        <input type="radio" name="choice" id="" @click="getName('Master')">
+                      </label>
+                    </h1>
                     <div>
-                        <input type="text" name="" id="" placeholder="Card Number" class="border-2 border-black w-[620px] h-[50px] indent-[10px] mr-[10px] mb-[10px]">
+                        <input type="text" name="" id="" placeholder="Card Number" class="border-2 border-black w-[620px] h-[50px] indent-[10px] mr-[10px] mb-[10px]" >
                     </div>
                     <div>
                         <input type="text" name="" id="" placeholder="Name on Card" class="border-2 border-black mr-[10px] mb-[10px] w-[200px] h-[50px] indent-[10px]">
@@ -96,7 +131,7 @@
                     <div>
                         <button><b>Return to Customer Information</b></button>
                         <router-link :to="{name: 'ordercomplete'}"> 
-                          <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white">
+                          <button class="border-2 border-black p-2 ml-[270px] bg-indigo-800 text-white" @click="confirmOrder()">
                           Complete Order </button>
                         </router-link>
                     </div>
@@ -156,25 +191,97 @@
   <script>
   import axios from 'axios';
   import { useRouter } from 'vue-router';
+  import {mapMutations} from 'vuex';
+  import { listPaymentMethod, listShippingMethod,  } from '../api/product';
+  import {listLatestUserAddress, listUserById} from '../api/user';
   
   export default {
     data() {
       return {
         jsonData: null,
+        name: '',
+        paymentMethodId: '',
+        shippingMethodId: '',
+        addressId: '',
+        userId: '',
       };
     },
-    // mounted() {
-    //   axios
-    //     .get('http://localhost:3000/api/data')
-    //     .then(response => {
-    //       this.jsonData = response.data;
-    //     })
-    //     .catch(error => {
-    //       console.error(error);
-    //     });
-    // },
-    // methods: {
-    // }
+    mounted() {
+      this.getPaymentMethod();
+      this.getShippingMethod();
+      this.getAddressId();
+      this.getUserId();
+    },
+    methods: {
+      confirmOrder(){
+        this.addPaymentMethod();
+        this.addOrderToDB();
+        this.getAddressId();
+        this.getUserId();
+      },
+      //payment get api
+      getPaymentMethod(){
+        listPaymentMethod().then( res =>{
+          console.log("Payment Latest Update",res);
+          this.paymentMethodId = this.paymentMethodId+ res.data.id;
+        }).catch(error => {
+          console.error('Error fetching data:', error);
+        });
+      },
+
+      //shipping get api
+      getShippingMethod(){
+        listShippingMethod().then( res =>{
+          console.log("Shipping Latest Update",res);
+          this.shippingMethodId = res.data.id;
+        }).catch(error => {
+          console.error('Error fetching data:', error);
+        });
+      },
+
+      //address get api
+      getAddressId(){
+        listLatestUserAddress().then( res =>{
+          console.log("Address Latest Update",res);
+          this.addressId = res.data.id;
+        }).catch(error => {
+          console.error('Error fetching data:', error);
+        });
+      },
+
+      //user get api
+      getUserId(){
+        listUserById().then( res =>{
+          console.log("User Latest Update",res);
+          this.userId = res.data.id;
+        }).catch(error => {
+          console.error('Error fetching data:', error);
+        });
+      },
+
+      getName(name){
+        this.name = name;
+      },
+
+      addPaymentMethod() {
+        const cartData = {
+            name: this.name,
+        };
+        this.$store.dispatch('storePaymentMethod', cartData);
+      },
+
+      addOrderToDB(){
+        const additionalData = {
+          user_id: this.userId,
+          address_id: this.addressId,
+          payment_method_id: this.paymentMethodId,
+          shipping_method_id: this.shippingMethodId,
+        };
+        this.setProductName(additionalData);
+        this.$store.dispatch('updateCartData', this.$store.state.cartData);
+      },
+      ...mapMutations(['setProductName']),
+    }
   };
   </script>
   

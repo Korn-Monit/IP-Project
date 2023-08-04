@@ -44,7 +44,7 @@ const router = createRouter({
       component: () => import("../views/ContactUs.vue"),
     },
     {
-      path: "/quickview/:imageUrl/:name/:price",
+      path: "/quickview/:imageUrl/:name/:price/:product_id",
       name: "view",
       component: () => import("../views/QuickView.vue"),
     },
@@ -52,6 +52,11 @@ const router = createRouter({
       path: "/card/:imageUrl/:price/:name",
       name: "card",
       component: () => import("../views/Card.vue"),
+    },
+    {
+      path: "/addToCart",
+      name: "addToCart",
+      component: () => import("../views/AddToCart.vue"),
     },
     {
       path: "/cusinfo/:price/",
@@ -72,6 +77,31 @@ const router = createRouter({
       path: "/ordercomplete",
       name: "ordercomplete",
       component: () => import("../views/OrderComplete.vue"),
+    },
+    {
+      path: "/quickviewnotaddcart/:imageUrl/:price/:name",
+      name: "quickviewnotaddcart",
+      component: () => import("../views/QuickViewNotAtToCart.vue"),
+    },
+    {
+      path: "/cartdata",
+      name: "cartdata",
+      component: () => import("../views/CartData.vue"),
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: () => import("../views/testLoginSignUp.vue"),
+    },
+    {
+      path: "/parent",
+      name: "parent",
+      component: () => import("../views/Parent.vue"),
+    },
+    {
+      path: "/child",
+      name: "child",
+      component: () => import("../views/Child.vue"),
     }
   ],
 });
